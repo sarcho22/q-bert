@@ -17,6 +17,7 @@ public class dino extends Actor
     { 
         walk();
         count++;
+        
     } 
     public void walk() {
         setLocation(getX()+5, getY());

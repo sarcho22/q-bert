@@ -14,14 +14,24 @@ public class MyWorld extends World
      * 
      */
     public int points = 0;
-    public int lives = 3;
+    
+    public Lives life1 = new Lives();
+    public Lives life2 = new Lives();
+    public Lives life3 = new Lives();
+    public Cubebert c = new Cubebert();
     
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 700, 1);
         buildPyramid();
-        addObject(new Cubebert(),505,170);
+        addObject(c,505,170);
+        addObject(new Feet(), 505, 196);
+        showText("Lives:", 40, 10);
+        addObject(life1, 40, 40);
+        addObject(life2, 80, 40);
+        addObject(life3, 120, 40);
+        
     }
     
     public void act() {
@@ -86,5 +96,32 @@ public class MyWorld extends World
     public void win() {
         Win w = new Win();
         Greenfoot.setWorld(w);
+    }
+    
+    public void removeLives() {
+        if(life3 != null) {
+            removeObject(life3);
+            life3 = null;
+            addObject(c,505,170);
+        addObject(new Feet(), 505, 196);
+        }
+        else if(life2 != null) {
+            removeObject(life2);
+            life2 = null;
+            addObject(c,505,170);
+        addObject(new Feet(), 505, 196);
+        }
+        else if(life1 != null) {
+            removeObject(life1);
+            life1 = null;
+            addObject(c,505,170);
+        addObject(new Feet(), 505, 196);
+        }
+        else{
+            Dead e = new Dead();
+            Greenfoot.setWorld(e);
+            addObject(c,505,170);
+        addObject(new Feet(), 505, 196);
+        }
     }
 }

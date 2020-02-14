@@ -21,7 +21,7 @@ public class Top extends Actor
     }    
     
     public void intersect() {
-        if (isTouching(Cubebert.class) && !hit) {
+        if (isTouching(Feet.class) && !hit && !(((MyWorld)getWorld()).c.fall)) {
             setImage("top3.png");
             ((MyWorld)getWorld()).points++;
             hit = true;
