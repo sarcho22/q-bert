@@ -1,12 +1,5 @@
 #Greenfoot project file
 class.Bottom.image=bottom3.png
-<<<<<<< HEAD
-class.Cubebert.image=falling.png
-class.MyWorld.image=retro-background-futuristic-landscape-1980s-style-vector-20907526.jpg
-class.Top.image=output-onlinepngtools\ (2).png
-class.dino.image=dino-left-up.png
-class.menu.image=retro-background-futuristic-landscape-1980s-style-vector-20907526.jpg
-=======
 class.Cubebert.image=standing.png
 class.Feet.image=feet.png
 class.Lives.image=ppl3.png
@@ -16,7 +9,6 @@ class.blackborder.image=black.png
 class.dino.image=dino-left-up.png
 class.menu.image=bathroom-tile.jpg
 class.menuObjects.image=q_bert_logo_by_ringostarr39_d7iz4dc-fullview.png
->>>>>>> e229072eb3ff5887b8d190215360cbd9a6ea7703
 class.oldTitle.image=q_bert_logo_by_ringostarr39_d7iz4dc-fullview.png
 dependency1.from=menu
 dependency1.to=oldTitle
@@ -60,23 +52,13 @@ dependency8.type=UsesDependency
 dependency9.from=Feet
 dependency9.to=MyWorld
 dependency9.type=UsesDependency
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=378
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
 editor.fx.0.y=0
-<<<<<<< HEAD
-height=885
-=======
-<<<<<<< HEAD
-height=1043
-package.numDependencies=10
-package.numTargets=9
-=======
 height=744
->>>>>>> 8a7ab5bede13cf686579a37142db11a536a8e8d9
 package.numDependencies=14
 package.numTargets=13
->>>>>>> e229072eb3ff5887b8d190215360cbd9a6ea7703
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -98,8 +80,6 @@ target1.type=ClassTarget
 target1.width=90
 target1.x=0
 target1.y=0
-<<<<<<< HEAD
-=======
 target10.height=50
 target10.name=Cubebert
 target10.showInterface=false
@@ -128,7 +108,6 @@ target13.type=ClassTarget
 target13.width=80
 target13.x=0
 target13.y=0
->>>>>>> e229072eb3ff5887b8d190215360cbd9a6ea7703
 target2.height=50
 target2.name=Dead
 target2.showInterface=false
@@ -165,48 +144,28 @@ target6.width=80
 target6.x=0
 target6.y=0
 target7.height=50
-<<<<<<< HEAD
-target7.name=menu
-=======
 target7.name=Feet
->>>>>>> e229072eb3ff5887b8d190215360cbd9a6ea7703
 target7.showInterface=false
 target7.type=ClassTarget
 target7.width=80
 target7.x=0
 target7.y=0
 target8.height=50
-<<<<<<< HEAD
-target8.name=Win
-=======
 target8.name=Top
->>>>>>> e229072eb3ff5887b8d190215360cbd9a6ea7703
 target8.showInterface=false
 target8.type=ClassTarget
 target8.width=80
 target8.x=0
 target8.y=0
 target9.height=50
-<<<<<<< HEAD
-target9.name=MyWorld
-=======
 target9.name=Bottom
->>>>>>> e229072eb3ff5887b8d190215360cbd9a6ea7703
 target9.showInterface=false
 target9.type=ClassTarget
 target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
-<<<<<<< HEAD
-width=1267
-=======
-<<<<<<< HEAD
-width=1923
-=======
 width=1382
->>>>>>> e229072eb3ff5887b8d190215360cbd9a6ea7703
->>>>>>> 8a7ab5bede13cf686579a37142db11a536a8e8d9
 world.lastInstantiated=MyWorld
 xPosition=0
 yPosition=0
