@@ -15,38 +15,57 @@ public class Cubebert extends Actor
     public String direction = "right";
     boolean fall = false;
     public boolean dino = true;
+    public int timer = 20;
     public Cubebert() {
-        getImage().scale(105,105);
     }
     public void act() 
     {
-       getImage().scale(105,105);
-
+       setImage("standing.png");
+       if (timer <= 0) {
         move();
+        timer = 20;
+    }
+        timer--;
         fall();
     }    
     
     public void move() {
+        
         if (Greenfoot.isKeyDown("q")) {
-            setImage("jumping.png");
             //jump up and left
-            if (direction == "right") {
-                getImage().mirrorHorizontally();
+                setImage("jumping-left.png");
+                setLocation(getX()-4, getY()-3);
+                setLocation(getX()-4, getY()-4);
+                setLocation(getX()-2, getY()-6);
             }
-        }
+        
         if (Greenfoot.isKeyDown("w")) {
-            setImage("jumping.png");
             //jump up and right
-        }
+                setImage("jumping.png");
+                setLocation(getX()+4, getY()-3);
+                setLocation(getX()+4, getY()-4);
+                setLocation(getX()+2, getY()-6);
+            }
+        
         if (Greenfoot.isKeyDown("a")) {
-            setImage("falling.png");
             //jump down and left
+                setImage("falling-left.png");
+                //setLocation(getX()-38, getY()+55);
+                setLocation(getX()-10, getY()-2);
+                setLocation(getX()-1, getY()+3);
+                setLocation(getX()-1, getY()+5);
+                setLocation(getX()-1, getY()+3);
+            }
+        
+        if (Greenfoot.isKeyDown("s")) {
+                setImage("falling.png");
+                setLocation(getX()+4, getY()-2);
+                setLocation(getX()+1, getY()+3);
+                setLocation(getX()+1, getY()+5);
+                setLocation(getX()+1, getY()+3);
         }
-        if (Greenfoot.isKeyDown("s")) {            
-            setImage("falling.png");
-
             //jump down and right
-        }
+        
     }
     public void fall() {
       if (!this.isTouching(Bottom.class) && !this.isTouching(Top.class)) {
