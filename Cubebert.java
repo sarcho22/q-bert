@@ -32,75 +32,169 @@ public class Cubebert extends Actor
         timer = 20;
     }
         timer--;
-        fall();
+        fall();       
         count--;
         if(isTouching(dino.class) && timer <= 0) {
             ((MyWorld)getWorld()).removeLives();
             count = 20;
         }
-        ((MyWorld)getWorld()).showText("Count:" +  count, 100, 100); 
     }    
     
     public void move() {
         
         if (Greenfoot.isKeyDown("q")) {
-            //jump up and left
-                setImage("jumping-left.png");
-                setLocation(getX()-6, getY());
+                 //jump up and left
+                 setImage("jumping-left.png");
+                 setLocation(getX()-6, getY());
+                 ((MyWorld)getWorld()).f.setLocation(getX()-6, getY());
+                 Greenfoot.delay(2);
+                
                  setLocation(getX()-4, getY());
+                 ((MyWorld)getWorld()).f.setLocation(getX()-4, getY());
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-5, getY()-9);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-5, getY()-9);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-4, getY()-11);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-4, getY()-11);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-7, getY()-14);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-7, getY()-14);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-6, getY()-6);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-6, getY()-6);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-4, getY()-7);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-4, getY()-7);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-4, getY()-8);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-4, getY()-8);
+                 Greenfoot.delay(2);
             
             }
         
         if (Greenfoot.isKeyDown("w")) {
             //jump up and right
-                setImage("jumping.png");
-                setLocation(getX()+6, getY());
+                 setImage("jumping.png");
+                 setLocation(getX()+6, getY());
+                 ((MyWorld)getWorld()).f.setLocation(getX()+6, getY());
+                 Greenfoot.delay(2);
+                
                  setLocation(getX()+4, getY());
+                 ((MyWorld)getWorld()).f.setLocation(getX()+4, getY());
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+5, getY()-9);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+5, getY()-9);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+4, getY()-11);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+4, getY()-11);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+7, getY()-14);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+7, getY()-14);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+6, getY()-6);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+6, getY()-6);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+4, getY()-7);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+4, getY()-7);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+4, getY()-8);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+4, getY()-8);
+                 Greenfoot.delay(2);
             }
         
         if (Greenfoot.isKeyDown("a")) {
             //jump down and left
-                setImage("falling-left.png");
-                //setLocation(getX()-40, getY()+55);
-                setLocation(getX()-6, getY()-2);
+                 setImage("falling-left.png");
+                 //setLocation(getX()-40, getY()+55);
+                 setImage("jumping.png");
+                 
+                 setLocation(getX()-6, getY()-2);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-6, getY()-2);
+                 Greenfoot.delay(2);
+                
                  setLocation(getX()-4, getY()-1);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-4, getY()-1);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-5, getY()+9);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-5, getY()+9);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-4, getY()+11);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-4, getY()+11);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-7, getY()+14);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-7, getY()+14);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-6, getY()+6);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-6, getY()+6);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-4, getY()+7);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-4, getY()+7);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()-4, getY()+11);
+                 ((MyWorld)getWorld()).f.setLocation(getX()-4, getY()+11);
+                 Greenfoot.delay(2);
+                
                 
             }
         
         if (Greenfoot.isKeyDown("s")) {
-                setImage("falling.png");
+                 setImage("falling.png");
                  setLocation(getX()+6, getY()-2);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+6, getY()-2);
+                 Greenfoot.delay(2);
+                
                  setLocation(getX()+4, getY()-1);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+4, getY()-1);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+5, getY()+9);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+5, getY()+9);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+4, getY()+11);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+4, getY()+11);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+7, getY()+14);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+7, getY()+14);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+6, getY()+6);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+6, getY()+6);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+4, getY()+7);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+4, getY()+7);
+                 Greenfoot.delay(2);
+                 
                  setLocation(getX()+4, getY()+11);
+                 ((MyWorld)getWorld()).f.setLocation(getX()+4, getY()+11);
+                 Greenfoot.delay(2);
         }
             //jump down and right
         
     }
     public void fall() {
-      if (!this.isTouching(Top.class)) {
+      if (!this.isTouching(Top.class) ||  getY() > 559-getImage().getHeight()/2) {
             fall = true;
             canMove = false;
         }
@@ -116,5 +210,11 @@ public class Cubebert extends Actor
         }
         
         
+    }
+    public void setDefault() {
+            setLocation(505,170);
+            fall = false;
+            canMove = true;
+            dino = true;
     }
 }

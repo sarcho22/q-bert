@@ -19,6 +19,7 @@ public class MyWorld extends World
     public Lives life2 = new Lives();
     public Lives life3 = new Lives();
     public Cubebert c = new Cubebert();
+    public Feet f = new Feet();
     
     public MyWorld()
     {    
@@ -26,8 +27,8 @@ public class MyWorld extends World
         super(1000, 700, 1);
         buildPyramid();
         addObject(c,505,170);
-        addObject(new Feet(), 505, 196);
-        showText("Lives:", 40, 10);
+        
+        addObject(f, 505, 196);
         addObject(life1, 40, 40);
         addObject(life2, 80, 40);
         addObject(life3, 120, 40);
@@ -102,26 +103,21 @@ public class MyWorld extends World
         if(life3 != null) {
             removeObject(life3);
             life3 = null;
-            addObject(c,505,170);
-        addObject(new Feet(), 505, 196);
+            c.setDefault();
         }
         else if(life2 != null) {
             removeObject(life2);
             life2 = null;
-            addObject(c,505,170);
-        addObject(new Feet(), 505, 196);
+            c.setDefault();
+            
+
         }
         else if(life1 != null) {
             removeObject(life1);
             life1 = null;
-            addObject(c,505,170);
-        addObject(new Feet(), 505, 196);
-        }
-        else{
+            Greenfoot.delay(100);
             Dead e = new Dead();
             Greenfoot.setWorld(e);
-            addObject(c,505,170);
-        addObject(new Feet(), 505, 196);
         }
     }
 }
