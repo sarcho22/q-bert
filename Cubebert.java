@@ -27,6 +27,7 @@ public class Cubebert extends Actor
     }
         timer--;
         fall();
+       
     }    
     
     public void move() {
