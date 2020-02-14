@@ -16,12 +16,10 @@ public class Cubebert extends Actor
     boolean fall = false;
     public boolean dino = true;
     public Cubebert() {
-        getImage().scale(105,105);
     }
     public void act() 
     {
        setImage("standing.png");
-       getImage().scale(105,105);
 
         move();
         fall();
