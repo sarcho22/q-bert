@@ -17,7 +17,9 @@ public class dino extends Actor
     { 
         walk();
         count++;
-        
+        if (isAtEdge()) {
+            getWorld().removeObject(this);
+        }
     } 
     public void walk() {
         setLocation(getX()+5, getY());
@@ -25,7 +27,7 @@ public class dino extends Actor
             setImage("dino-left-up.png");
         }
         else {
-            setImage("Dino-right-up.png");
+            setImage("dino-right-up.png");
         }
     }   
 }
