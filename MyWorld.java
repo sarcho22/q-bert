@@ -20,6 +20,7 @@ public class MyWorld extends World
     public Lives life3 = new Lives();
     public Cubebert c = new Cubebert();
     public Feet f = new Feet();
+    public int mobTimer = 200;
     
     public MyWorld()
     {    
@@ -39,6 +40,12 @@ public class MyWorld extends World
         if (points == 28) {
             win();
         }
+        mobTimer--;
+        if (mobTimer <= 0) {
+            addObject(new Bird(), 505, 170);
+            mobTimer = 200;
+        }
+        
     }
     
     public void buildPyramid() {

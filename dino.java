@@ -27,7 +27,7 @@ public class dino extends Actor
             setImage("dino-left-up.png");
         }
         else {
-            setImage("dino-right-up.png");
+            setImage("Dino-right-up.png");
         }
     }   
 }

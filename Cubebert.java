@@ -17,8 +17,9 @@ public class Cubebert extends Actor
     boolean fall = false;
     boolean canMove = true;
     public boolean dino = true;
-    public int timer = 20;
+    public int timer = 25;
     public int count = 20;
+    public int timer3 = 40;
     public boolean isFalling;
     public Cubebert() {
     }
@@ -28,16 +29,20 @@ public class Cubebert extends Actor
        if (timer <= 0) {
            if(canMove) {
                move();
+        timer = 25;
             }
-        timer = 20;
+        
     }
         timer--;
+        timer3--;
         fall();       
         count--;
         if(isTouching(dino.class) && timer <= 0) {
             ((MyWorld)getWorld()).removeLives();
-            count = 20;
+            count = 25;
+            
         }
+        checkMobs();
     }    
     
     public void move() {
@@ -216,5 +221,14 @@ public class Cubebert extends Actor
             fall = false;
             canMove = true;
             dino = true;
+    }
+    
+    public void checkMobs() {
+        if(timer3 <= 0) {
+        if(isTouching(Bird.class)) {
+            ((MyWorld)getWorld()).removeLives();
+        }
+        timer3 = 40;
+    }
     }
 }
