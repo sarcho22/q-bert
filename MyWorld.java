@@ -13,11 +13,20 @@ public class MyWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    public int points = 0;
+    public int lives = 3;
+    
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 700, 1);
         buildPyramid();
+    }
+    
+    public void act() {
+        if (points == 28) {
+            win();
+        }
     }
     
     public void buildPyramid() {
@@ -70,6 +79,11 @@ public class MyWorld extends World
         }
         
         addObject(new Bottom(), 505, 229);
-        addObject(new Top(), 505, 207);
+        addObject(new Top(), 505, 202);
+    }
+    
+    public void win() {
+        Win w = new Win();
+        Greenfoot.setWorld(w);
     }
 }
