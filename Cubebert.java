@@ -20,6 +20,7 @@ public class Cubebert extends Actor
     }
     public void act() 
     {
+       setImage("standing.png");
        getImage().scale(105,105);
 
         move();
