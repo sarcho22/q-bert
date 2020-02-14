@@ -1,16 +1,23 @@
 #Greenfoot project file
 class.Bottom.image=bottom3.png
-class.Cubebert.image=ppl3.png
+class.Cubebert.image=standing.png
 class.MyWorld.image=retro-background-futuristic-landscape-1980s-style-vector-20907526.jpg
 class.Top.image=output-onlinepngtools\ (2).png
-class.blackborder.image=black.png
+class.dino.image=dino-left-up.png
 class.menu.image=retro-background-futuristic-landscape-1980s-style-vector-20907526.jpg
 class.oldTitle.image=q_bert_logo_by_ringostarr39_d7iz4dc-fullview.png
 dependency1.from=menu
 dependency1.to=oldTitle
 dependency1.type=UsesDependency
+dependency10.from=Cubebert
+dependency10.to=Top
+dependency10.type=UsesDependency
 dependency2.from=MyWorld
+<<<<<<< HEAD
 dependency2.to=blackborder
+=======
+dependency2.to=Cubebert
+>>>>>>> 60745fcef8cd2ccca1266f20c2c3c181423abda6
 dependency2.type=UsesDependency
 dependency3.from=MyWorld
 dependency3.to=Bottom
@@ -28,6 +35,7 @@ dependency7.from=Top
 dependency7.to=Cubebert
 dependency7.type=UsesDependency
 dependency8.from=Cubebert
+<<<<<<< HEAD
 dependency8.to=Bottom
 dependency8.type=UsesDependency
 dependency9.from=Cubebert
@@ -39,6 +47,19 @@ editor.fx.0.x=0
 editor.fx.0.y=0
 height=744
 package.numDependencies=9
+=======
+dependency8.to=dino
+dependency8.type=UsesDependency
+dependency9.from=Cubebert
+dependency9.to=Bottom
+dependency9.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=941
+editor.fx.0.y=58
+height=1043
+package.numDependencies=10
+>>>>>>> 60745fcef8cd2ccca1266f20c2c3c181423abda6
 package.numTargets=9
 project.charset=UTF-8
 publish.hasSource=false
@@ -83,7 +104,11 @@ target4.width=80
 target4.x=0
 target4.y=0
 target5.height=50
+<<<<<<< HEAD
 target5.name=blackborder
+=======
+target5.name=dino
+>>>>>>> 60745fcef8cd2ccca1266f20c2c3c181423abda6
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=90
@@ -118,7 +143,11 @@ target9.width=80
 target9.x=0
 target9.y=0
 version=3.0.0
+<<<<<<< HEAD
 width=1382
+=======
+width=1923
+>>>>>>> 60745fcef8cd2ccca1266f20c2c3c181423abda6
 world.lastInstantiated=MyWorld
 xPosition=0
 yPosition=0
