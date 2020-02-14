@@ -15,27 +15,36 @@ public class Cubebert extends Actor
     public String direction = "right";
     boolean fall = false;
     public boolean dino = true;
+    public Cubebert() {
+        getImage().scale(105,105);
+    }
     public void act() 
     {
-        // Add your action code here.
+       getImage().scale(105,105);
+
         move();
         fall();
     }    
     
     public void move() {
         if (Greenfoot.isKeyDown("q")) {
+            setImage("jumping.png");
             //jump up and left
             if (direction == "right") {
-                getImage().mirrorVertically();
+                getImage().mirrorHorizontally();
             }
         }
         if (Greenfoot.isKeyDown("w")) {
+            setImage("jumping.png");
             //jump up and right
         }
         if (Greenfoot.isKeyDown("a")) {
+            setImage("falling.png");
             //jump down and left
         }
-        if (Greenfoot.isKeyDown("s")) {
+        if (Greenfoot.isKeyDown("s")) {            
+            setImage("falling.png");
+
             //jump down and right
         }
     }
