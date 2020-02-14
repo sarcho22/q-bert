@@ -13,11 +13,12 @@ public class Cubebert extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public String direction = "right";
-    
+    static boolean fall = false;
     public void act() 
     {
         // Add your action code here.
         move();
+        fall();
     }    
     
     public void move() {
@@ -35,6 +36,17 @@ public class Cubebert extends Actor
         }
         if (Greenfoot.isKeyDown("s")) {
             //jump down and right
+        }
+    }
+    public void fall() {
+        if (!this.isTouching(Bottom.class) && !this.isTouching(Top.class)) {
+            fall = true;
+        }
+        if (fall == true) {
+            setLocation(getX(), getY()+10);
+            if (getY() > 650) {
+                setLocation(getX(), 650);
+            }
         }
     }
 }
