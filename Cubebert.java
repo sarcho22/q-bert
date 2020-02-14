@@ -26,26 +26,27 @@ public class Cubebert extends Actor
     }    
     
     public void move() {
+        
         if (Greenfoot.isKeyDown("q")) {
-            setImage("jumping.png");
             //jump up and left
-            if (direction == "right") {
-                getImage().mirrorHorizontally();
+                setImage("jumping-left.png");
             }
-        }
+        
         if (Greenfoot.isKeyDown("w")) {
-            setImage("jumping.png");
             //jump up and right
-        }
+                setImage("jumping.png");
+            }
+        
         if (Greenfoot.isKeyDown("a")) {
-            setImage("falling.png");
             //jump down and left
-        }
-        if (Greenfoot.isKeyDown("s")) {            
+                setImage("falling-left.png");
+            }
+        
+        if (Greenfoot.isKeyDown("s")) {
             setImage("falling.png");
-
-            //jump down and right
         }
+            //jump down and right
+        
     }
     public void fall() {
       if (!this.isTouching(Bottom.class) && !this.isTouching(Top.class)) {
