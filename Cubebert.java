@@ -13,7 +13,8 @@ public class Cubebert extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public String direction = "right";
-    static boolean fall = false;
+    boolean fall = false;
+    public boolean dino = true;
     public void act() 
     {
         // Add your action code here.
@@ -39,14 +40,19 @@ public class Cubebert extends Actor
         }
     }
     public void fall() {
-        if (!this.isTouching(Bottom.class) && !this.isTouching(Top.class)) {
+      if (!this.isTouching(Bottom.class) && !this.isTouching(Top.class)) {
             fall = true;
         }
-        if (fall == true) {
+      if (fall == true) {
             setLocation(getX(), getY()+10);
             if (getY() > 650) {
                 setLocation(getX(), 650);
             }
+            if (dino) {
+                  getWorld().addObject(new dino(),0, 650);
+                  dino = false;
+            }
         }
+        
     }
 }
