@@ -18,6 +18,8 @@ public class menu extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 700, 1); 
         prepare();
+        
+      
     }
 
     /**
@@ -26,7 +28,33 @@ public class menu extends World
      */
     private void prepare()
     {
+
         oldTitle oldTitle = new oldTitle();
-        addObject(oldTitle,502,193);
+        addObject(oldTitle,492,185);
+        
+        addObject(new playButton(), 500, 500);
+        
+    }
+    
+    public void act() {
+        two t = new two();
+        addObject(t,642,345);
+        Greenfoot.delay(10);
+        
+        point p = new point();
+        addObject(p,742,368);
+        Greenfoot.delay(10);
+        
+        o o = new o();
+        addObject(o,824,340);
+        Greenfoot.delay(10);
+        
+        removeObject(t);
+        Greenfoot.delay(10);
+        
+        removeObject(p);
+        Greenfoot.delay(10);
+        removeObject(o);
+        Greenfoot.delay(10);
     }
 }
